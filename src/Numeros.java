@@ -14,26 +14,32 @@ public class Numeros{
                 i--; // Decrementar el índice para volver a pedir el número
             }
         }
-        System.out.println("Los números ingresados son: " + Arrays.toString(arrays));
-        //Preguntar al usuario que desea hacer
-        System.out.println("Gracias por ingresar los números. ¿Qué desea hacer ahora?");
-        System.out.println("1. Buscar la posición del número ingresado");
-        System.out.println("2. Mostrar el mayor y menor número ingresado");
-        System.out.println("3. Mostrar los multiplos de un número X");
-        System.out.println("4. Sumar todos los números ingresados");
-        System.out.println("5. Creemos algo nuevo!");
-        System.out.println("6. Salir");
-        int opcion = scanner.nextInt();
+        System.out.println("Los numeros ingresados son: ");
+        System.out.println(Arrays.toString(arrays));
+        //Mostrar el menu
+        int opcion = 0;
+        while (opcion != 6){
+            System.out.println("Gracias por ingresar los números. ¿Qué desea hacer ahora?");
+            System.out.println("1. Buscar la posición del número ingresado");
+            System.out.println("2. Mostrar el mayor y menor número ingresado");
+            System.out.println("3. Mostrar los multiplos de un número X");
+            System.out.println("4. Sumar todos los números ingresados");
+            System.out.println("5. Creemos algo nuevo!");
+            System.out.println("6. Salir");
+            opcion = scanner.nextInt();
+
+
         switch (opcion){
             case 1:
                 System.out.println("Ingrese el número que desea buscar: ");
                 int numeroBuscar = scanner.nextInt();
                 for (int i = 0; i < arrays.length; i++){
                     if (arrays[i] == numeroBuscar){
-                        System.out.println("El número " + numeroBuscar + " se encuentra en la posición " + i);
+                    System.out.println("El número " + numeroBuscar + " se encuentra en la posición " + i);
                     } else {
-                        System.out.println("El número " + numeroBuscar + " no se encuentra en el arreglo.");
+                    System.out.println("El número " + numeroBuscar + " no se encuentra en el arreglo.");
                     }
+                    break;
                 }
                 //Pendiente que me vuelva a preguntar si quiereo otra opción
 
@@ -50,6 +56,7 @@ public class Numeros{
                 }
                 System.out.println("El número mayor es: " + mayor);
                 System.out.println("El número menor es: " + menor);
+                break;
                 //Pendiente que me vuelva a preguntar si quiereo otra opción
 
             case 3:
@@ -59,14 +66,17 @@ public class Numeros{
                     if (arrays[i] % numeroX == 0){
                         System.out.println("El numero " + numeroX + " es multiplo de " + arrays[i]);
                     } else {
-                        System.out.println("El numero " + numeroX + " no es multiplo de ninún valor del arreglo");
+                        System.out.println("El numero " + numeroX + " no es multiplo de ningún valor del arreglo");
                     }
                 }
-                //Pendiente que me vuelva a preguntar si quiereo otra opción
+                break;
+
+                    //Pendiente que me vuelva a preguntar si quiereo otra opción
 
             case 4:
                 int resultado = arrays[0]+arrays[1]+arrays[2]+arrays[3]+arrays[4];
                 System.out.println("La suma de todos los valores del arreglo es: " + resultado);
+                break;
                 //Pendiente que me vuelva a preguntar si quiereo otra opción
 
             case  5:
@@ -83,13 +93,13 @@ public class Numeros{
                 if (promedioArreglo.length == 0){
                     System.out.println("No hay números mayores al promedio.");
                 }
+                break;
                 //Pendiente que me vuelva a preguntar si quiereo otra opción
 
             case 6:
                 System.out.println("Eso es todo amigos \uD83E\uDEF6");
+                break;
+            }
         }
     }
-
-
 }
-
