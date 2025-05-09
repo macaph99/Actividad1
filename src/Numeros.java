@@ -4,9 +4,9 @@ import java.util.Arrays;
 public class Numeros{
     public static void main(String [] args){
         Scanner scanner = new Scanner(System.in);
-        //Ingresar 5 datos enteros entre 10 y 100
-        int [] arrays = new int[5];
-        System.out.println("Ingrese 5 números enteros entre el 10 y el 100: ");
+        //Ingresar 15 datos enteros entre 10 y 100
+        int [] arrays = new int[15];
+        System.out.println("Ingrese 15 números enteros entre el 10 y el 100: ");
         for (int i = 0; i < arrays.length; i++){
             arrays[i] = scanner.nextInt();
             if (arrays[i] < 10 || arrays[i] > 100){
@@ -39,8 +39,8 @@ public class Numeros{
                     } else {
                     System.out.println("El número " + numeroBuscar + " no se encuentra en el arreglo.");
                     }
-                    break;
                 }
+                break;
                 //Pendiente que me vuelva a preguntar si quiereo otra opción
 
             case 2:
